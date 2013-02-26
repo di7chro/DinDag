@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:orientation="vertical"
+    android:padding="6dip" >
+
+    <TextView
+        android:id="@+id/tweet_from"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/general_title"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tweet_date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#acacac"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tweet_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="6dip"
+        android:textColor="#acacac"
+        android:textSize="14sp" />
+
+</LinearLayout>
