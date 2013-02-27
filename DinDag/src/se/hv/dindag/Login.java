@@ -44,7 +44,7 @@ public class Login extends Activity {
 			 * information from the textboxes and create a String with theese
 			 * two, whicjh is sent to the Hash-maker
 			 */
-			@Override
+			
 			public void onClick(View v) {
 				Toast.makeText(getApplicationContext(),
 						"Kollar dina uppgifter...", Toast.LENGTH_LONG).show();

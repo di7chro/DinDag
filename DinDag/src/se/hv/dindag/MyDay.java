@@ -77,7 +77,7 @@ public class MyDay extends ListActivity {
 			// Wait for an item in the list to be clicked
 			lv.setOnItemClickListener(new OnItemClickListener() {
 
-				@Override
+			
 				public void onItemClick(AdapterView<?> parent, View view,
 						int position, long id) {
 					// getting values from selected ListItem

@@ -69,7 +69,7 @@ public class Start extends ListActivity {
 		myBuild.setMessage("Du är inte ansluten till Internet. Utan en Internetanslutning kan du väl inte begära att jag ska kunna hämta din information?");
 		myBuild.setNeutralButton("OK", new DialogInterface.OnClickListener() {
 
-			@Override
+		
 			public void onClick(DialogInterface dialog, int which) {
 				Log.i("Start", "Kommit hit");
 				finish();
@@ -99,7 +99,7 @@ public class Start extends ListActivity {
 			Button login = (Button) findViewById(R.id.btnLogin);
 			login.setOnClickListener(new OnClickListener() {
 
-				@Override
+			
 				public void onClick(View v) {
 					// Login-button pressed. Start the Login-activity
 					Intent myIntent = new Intent(Start.this, Login.class);
@@ -138,7 +138,6 @@ public class Start extends ListActivity {
 				// Wait for an item in the list to be clicked
 				lv.setOnItemClickListener(new OnItemClickListener() {
 
-					@Override
 					public void onItemClick(AdapterView<?> parent, View view,
 							int position, long id) {
 						Toast.makeText(getApplicationContext(),
