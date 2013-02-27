@@ -5,7 +5,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * Fires up the AboutUs Activity really good
+ * Fires up the AboutUs Activity really good, or at least I hope so :-)
  * 
  * @author imcoh
  * 
