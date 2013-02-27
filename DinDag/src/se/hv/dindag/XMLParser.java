@@ -40,7 +40,8 @@ public class XMLParser {
 	/**
 	 * Getting XML from URL making HTTP request
 	 * 
-	 * @param url string
+	 * @param url
+	 *            string
 	 */
 	public String getXmlFromUrl(String url) {
 		String xml = null;
@@ -68,7 +69,8 @@ public class XMLParser {
 	/**
 	 * Getting XML DOM element
 	 * 
-	 * @param XML string
+	 * @param XML
+	 *            string
 	 * @return The DOM-object
 	 */
 	public Document getDomElement(String xml) {
@@ -99,7 +101,8 @@ public class XMLParser {
 	/**
 	 * Gets the value of the chosen node
 	 * 
-	 * @param elem  element
+	 * @param elem
+	 *            element
 	 * @return The value of the Node
 	 */
 	public final String getElementValue(Node elem) {

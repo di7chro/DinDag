@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.ExecutionException;
 
-import se.hv.crille.R;
-
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.Context;

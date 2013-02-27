@@ -13,7 +13,8 @@ import android.os.AsyncTask;
  * point out wich DIV-tag we want to retrive. The result is stored in a String,
  * wich is returned as a result.
  * 
- * @param The URL of a certain website
+ * @param The
+ *            URL of a certain website
  * @return The String of text contained in a specific DIV-tag
  * @author imcoh
  * 

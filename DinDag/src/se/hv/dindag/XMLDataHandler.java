@@ -11,11 +11,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.net.ParseException;
 import android.os.AsyncTask;
-import android.os.SystemClock;
 import android.text.Html;
 import android.text.Spanned;
 import android.util.Log;

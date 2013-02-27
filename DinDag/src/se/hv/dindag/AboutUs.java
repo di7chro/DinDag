@@ -1,6 +1,5 @@
 package se.hv.dindag;
 
-import se.hv.crille.R;
 import android.app.Activity;
 import android.os.Bundle;
 

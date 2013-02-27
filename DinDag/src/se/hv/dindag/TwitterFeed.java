@@ -14,8 +14,6 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import se.hv.crille.R;
-
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Context;

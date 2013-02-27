@@ -4,19 +4,14 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
-import se.hv.crille.R;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -51,8 +46,8 @@ public class Login extends Activity {
 			 */
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(getApplicationContext(), "Kollar dina uppgifter...",
-						Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(),
+						"Kollar dina uppgifter...", Toast.LENGTH_LONG).show();
 				// Loginknappen har klickats. Kolla uppgifterna
 				EditText username = (EditText) findViewById(R.id.tfUsername);
 				EditText password = (EditText) findViewById(R.id.tfPassword);

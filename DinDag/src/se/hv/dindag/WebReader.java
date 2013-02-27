@@ -1,11 +1,9 @@
 package se.hv.dindag;
 
-import se.hv.crille.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebView;
-import android.widget.Toast;
 
 /**
  * Opens up a new WebView and loads the URL of the chosen element from the feed

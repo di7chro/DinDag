@@ -4,13 +4,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.ExecutionException;
 
-import se.hv.crille.R;
-
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -66,7 +63,6 @@ public class MyDay extends ListActivity {
 			// Fill the ArrayList with the items we got from the ASynkTask
 			myDayItems = myDayNews.get();
 
-
 			// Add the menuItems to our ListView
 			ListAdapter adapter = new SimpleAdapter(this, myDayItems,
 					R.layout.activity_myday_list, new String[] { KEY_TITLE,
@@ -108,6 +104,7 @@ public class MyDay extends ListActivity {
 			e.printStackTrace();
 		}
 	}
+
 	/**
 	 * Displays the menu for the startup screen
 	 */
@@ -128,7 +125,8 @@ public class MyDay extends ListActivity {
 		case R.id.menuSave:
 			AlertDialog.Builder savePopup = new AlertDialog.Builder(this);
 			savePopup.setTitle("Spara dina loginuppgifter");
-			savePopup.setMessage("Här kan vi implementera en SQLlite-databas för att spara uppgifterna man matade in.");
+			savePopup
+					.setMessage("Här kan vi implementera en SQLlite-databas för att spara uppgifterna man matade in.");
 			savePopup.setNeutralButton("OK", null);
 			savePopup.show();
 
@@ -137,7 +135,8 @@ public class MyDay extends ListActivity {
 		case R.id.menuMail:
 			AlertDialog.Builder mailPopup = new AlertDialog.Builder(this);
 			mailPopup.setTitle("Kolla mail");
-			mailPopup.setMessage("Öppnar helt enkelt en WebView till studenternas Live-mail sida. Vi behöver inte ta med någon login eller så, bara öppna en WebView.");
+			mailPopup
+					.setMessage("Öppnar helt enkelt en WebView till studenternas Live-mail sida. Vi behöver inte ta med någon login eller så, bara öppna en WebView.");
 			mailPopup.setNeutralButton("OK", null);
 			mailPopup.show();
 
