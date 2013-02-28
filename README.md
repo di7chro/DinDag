@@ -3,11 +3,11 @@ DinDag
 
 Nya versionen av DinDag-repon
 
-Hantera Git-Projekten
+<h3>Hantera Git-Projekten</h3>
 Gå till https://github.com/di7chro/DinDag i webbläsaren och tryck på "Fork" knappen. Detta kopierar hela mitt projekt till er Github användare. Använd kommandotolken och gå till mappen där du vill ladda ner projektet i din dator. Skriv sedan nedanstående för att klona ner projektet från er github-sida till er dator.
 
 
-Hämta hem senaste versionen till lokal dator:
+<h3>Hämta hem senaste versionen till lokal dator:</h3>
 
 git clone git@github.com:XXX/learnGitHub.git (XXX är ditt användarnamn på Git)
 
