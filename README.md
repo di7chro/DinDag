@@ -24,3 +24,10 @@ git push
 Gå till ert github-projekt och tryck på "Pull Request" och följ instruktionerna för att be orginal-projektet att pulla ert projektet in till orginalet.
 
 Klart!
+
+<h3>Fel</h3>
+Om du kör en push och får tillbaka ett fel innehållande [rejected non-fast-forward] kan du lölsa det genom att köra:
+
+git pull
+
+git push
