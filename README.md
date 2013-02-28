@@ -8,6 +8,7 @@ Gå till https://github.com/di7chro/DinDag i webbläsaren och tryck på "Fork" k
 
 
 Hämta hem senaste versionen till lokal dator:
+
 git clone git@github.com:XXX/learnGitHub.git (XXX är ditt användarnamn på Git)
 
 git status
