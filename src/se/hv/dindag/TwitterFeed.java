@@ -1,5 +1,6 @@
 package se.hv.dindag;
 
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,6 +18,8 @@ import org.json.JSONObject;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,6 +27,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class TwitterFeed extends ListActivity {
@@ -62,6 +66,7 @@ public class TwitterFeed extends ListActivity {
 						tweet.from = session.getString("from_user");
 						tweet.date = prettyfyDate(session
 								.getString("created_at"));
+						tweet.pic = session.getString("profile_image_url");
 						tweets.add(tweet);
 					}
 				}
@@ -101,6 +106,43 @@ public class TwitterFeed extends ListActivity {
 		return theDate;
 	}
 
+	/**
+	 * Laddar hem Twitter-bilden
+	 * 
+	 * @author imcoh
+	 * 
+	 */
+	private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+		ImageView bmImage = (ImageView) findViewById(R.id.twitterPic);
+
+		public DownloadImageTask(ImageView bmImage) {
+			this.bmImage = bmImage;
+		}
+
+		protected Bitmap doInBackground(String... urls) {
+			String urldisplay = urls[0];
+			Bitmap mIcon11 = null;
+			try {
+				InputStream in = new java.net.URL(urldisplay).openStream();
+				mIcon11 = BitmapFactory.decodeStream(in);
+			} catch (Exception e) {
+				Log.e("Error", e.getMessage());
+				e.printStackTrace();
+			}
+			return mIcon11;
+		}
+
+		protected void onPostExecute(Bitmap result) {
+			bmImage.setImageBitmap(result);
+		}
+	}
+
+	/**
+	 * Stoppar in alla funna resultat i listan
+	 * 
+	 * @author imcoh
+	 * 
+	 */
 	private class TweetListAdaptor extends ArrayAdapter<Tweet> {
 		private ArrayList<Tweet> tweets;
 
@@ -121,6 +163,9 @@ public class TwitterFeed extends ListActivity {
 			TextView tvText = (TextView) v.findViewById(R.id.tweet_text);
 			TextView tvDate = (TextView) v.findViewById(R.id.tweet_date);
 			TextView tvFrom = (TextView) v.findViewById(R.id.tweet_from);
+
+			// new DownloadImageTask((ImageView)
+			// findViewById(R.id.twitterPic)).execute(o.pic);
 			tvFrom.setText("@" + o.from);
 			tvDate.setText(o.date);
 			tvText.setText(o.text);

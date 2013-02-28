@@ -6,8 +6,11 @@ import java.util.concurrent.ExecutionException;
 
 import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.ClipData.Item;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,6 +35,7 @@ public class MyDay extends ListActivity {
 	static final String KEY_TITLE = "title";
 	static final String KEY_DESC = "description";
 	static final String KEY_DATE = "pubDate";
+	static final String KEY_TAG = "tag";
 
 	/*
 	 * Fires up the activity_myday and waits for the Login-button to be pressed.
@@ -66,18 +70,31 @@ public class MyDay extends ListActivity {
 			// Add the menuItems to our ListView
 			ListAdapter adapter = new SimpleAdapter(this, myDayItems,
 					R.layout.activity_myday_list, new String[] { KEY_TITLE,
-							KEY_LINK, KEY_DESC, KEY_DATE }, new int[] {
+							KEY_LINK, KEY_DESC, KEY_DATE, KEY_TAG }, new int[] {
 							R.id.mydayTitle, R.id.mydayLink,
-							R.id.mydayDescription, R.id.mydayDate });
-
+							R.id.mydayDescription, R.id.mydayDate,
+							R.id.mydayTag });
 			setListAdapter(adapter);
 
 			ListView lv = (ListView) findViewById(R.id.myDayList);
-
+			for (int i = 0; i <= myDayItems.size(); i++) {
+				String theTag = myDayItems.get(i).get(KEY_TAG);
+				if (theTag.contains("schema")) {
+					Log.i("TAG", "Schema hittad");
+					// TextView tv = (TextView) myDayItems.get(i);
+				} 
+				else if (theTag.contains("kronox"))
+					Log.i("TAG", "Kronox hittad");
+				else if (theTag.contains("ladok"))
+					Log.i("TAG", "Ladok hittad");
+				else if (theTag.contains("disco"))
+					Log.i("TAG", "Disco hittad");
+				else
+					Log.i("TAG ANNAT", theTag);
+			}
 			// Wait for an item in the list to be clicked
 			lv.setOnItemClickListener(new OnItemClickListener() {
 
-			
 				public void onItemClick(AdapterView<?> parent, View view,
 						int position, long id) {
 					// getting values from selected ListItem

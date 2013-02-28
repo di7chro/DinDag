@@ -4,4 +4,5 @@ public class Tweet {
 	String from;
 	String text;
 	String date;
+	String pic;
 }

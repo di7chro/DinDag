@@ -14,6 +14,7 @@ import android.os.AsyncTask;
 import android.text.Html;
 import android.text.Spanned;
 import android.util.Log;
+import android.widget.TextView;
 
 /**
  * This class manages the loading of external data. It uses the ASynkTask class
